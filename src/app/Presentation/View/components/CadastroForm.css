@@ -1,0 +1,21 @@
+.cadastroform {
+    min-width: 40vw;
+    height: 100vh;
+    float: right;
+}
+
+.textinput {
+    border: solid 3.4px rgba(37, 37, 37, 0.801);
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.nameinput {
+    width: 45%; 
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.otherinputs {
+    width: 90%;
+}
