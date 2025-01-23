@@ -4,6 +4,7 @@ import './Cadastro.css'
 export default function Cadastro() {
     return (
         <>
+            <div className="fixed min-h-full min-w-full bg" />
             <CadastroForm />
         </>
     )

@@ -2,6 +2,15 @@
     min-width: 40vw;
     height: 100vh;
     float: right;
+    border-left: solid 3px #D6AE3C;
+}
+
+.containerleftpadding {
+    padding-left: 2vw;
+}
+
+.containercentermargin {
+    margin: auto;
 }
 
 .textinput {
@@ -18,4 +27,17 @@
 
 .otherinputs {
     width: 90%;
+}
+
+.imgcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.confirmbtn {
+    background-color: #D6AE3C;
+    /* A cor do fundo do hover está em Tailwind CSS */
 }
