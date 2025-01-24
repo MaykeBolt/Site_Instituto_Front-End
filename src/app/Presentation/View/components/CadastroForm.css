@@ -1,12 +1,12 @@
 .cadastroform {
     min-width: 40vw;
-    height: 100vh;
+    min-height: 100vh;
     float: right;
     border-left: solid 3px #D6AE3C;
 }
 
 .containerleftpadding {
-    padding-left: 2vw;
+    padding-left: 3vw;
 }
 
 .containercentermargin {
@@ -16,17 +16,22 @@
 .textinput {
     border: solid 3.4px rgba(37, 37, 37, 0.801);
     border-radius: 3px;
-    padding: 2px;
+    padding: 5px;
+    padding-left: 5px;
+}
+
+.inputspacing {
+    margin-bottom: 4vh;
 }
 
 .nameinput {
-    width: 45%; 
+    width: 42%; 
     margin-left: 2px;
     margin-right: 2px;
 }
 
 .otherinputs {
-    width: 90%;
+    width: 85%;
 }
 
 .imgcontainer {
@@ -40,4 +45,23 @@
 .confirmbtn {
     background-color: #D6AE3C;
     /* A cor do fundo do hover está em Tailwind CSS */
+}
+
+@media only screen and (max-width: 810px) {
+    .cadastroform {
+        min-width: 100vw;
+        text-align: center;
+    }
+    .containerleftpadding {
+        padding-left: 0;
+    }
+    .nameinput {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 811px) {
+    .nameinputbreak {
+        display: none;
+    }
 }
