@@ -2,7 +2,7 @@
     min-width: 40vw;
     min-height: 100vh;
     float: right;
-    border-left: solid 3px #D6AE3C;
+    border-left: solid 3px #D6AE3C;   
 }
 
 .containerleftpadding {
@@ -16,7 +16,7 @@
 .textinput {
     border: solid 3.4px rgba(37, 37, 37, 0.801);
     border-radius: 3px;
-    padding: 5px;
+    padding: 8px;
     padding-left: 5px;
 }
 
@@ -47,10 +47,45 @@
     /* A cor do fundo do hover está em Tailwind CSS */
 }
 
+/* Esconde o botão: */
+[type="radio"] {
+    opacity: 0;
+}
+/* Afeta o botão/label: */
+[type="radio"] + label {
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+}
+/* Afeta somente o botão */
+[type="radio"] + label::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px rgba(37, 37, 37, 0.801) solid;
+    background-color: white;
+}
+/* Bolinha de quando for presionado: */
+ [type="radio"]:checked + label::after {
+    position: absolute;
+    content: "";
+    top: 0.45em;
+    left: 0.30em;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%;
+}  
+
+/* Quando a largura for igual ou abaixo de 810px */
 @media only screen and (max-width: 810px) {
     .cadastroform {
         min-width: 100vw;
         text-align: center;
+        background-color: rgba(255, 245, 190, 0.726);
     }
     .containerleftpadding {
         padding-left: 0;
@@ -58,10 +93,32 @@
     .nameinput {
         width: 85%;
     }
+    .genderintro {
+        display: none;
+    }
+    .genderintro810px {
+        color: #4b5563;
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+        margin-top: 1rem
+    }
 }
 
+/* Quando a largura for acima de 810px */
 @media only screen and (min-width: 811px) {
     .nameinputbreak {
         display: none;
     }
+    .genderintro810px {
+        display: none;   
+    }
+    [type="radio"] + label::before {
+        top: 4px;
+    }
+    [type="radio"]:checked + label::after {
+        top: 0.45em;
+        left: 0.25em;
+        width: 11px;
+        height: 11px;
+    }  
 }
