@@ -1,4 +1,4 @@
-//import { StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 //import './app/Presentation/View/screens/index.css'
 import App from './app/Presentation/View/screens/App.tsx'
@@ -7,7 +7,7 @@ import Cadastro from './app/Presentation/View/screens/Cadastro.tsx'
 import Login from './app/Presentation/View/screens/Login.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  // <StrictMode>
+   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route index element={<App />}/>
@@ -15,5 +15,5 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/login" element={<Login/>} />
       </Routes>
     </BrowserRouter>
-  // </StrictMode>,
+   </StrictMode>,
 )

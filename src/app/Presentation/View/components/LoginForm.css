@@ -1,0 +1,48 @@
+.loginform {
+    background-color: rgb(240, 240, 240);
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: 3.5vh 30vw 3.5vh 30vw;
+    border-radius: 10%;
+    height: min-content;
+    /* Unico jeito de fazer a div chegar perto do fundo da página SEM usar o body (obrigado React Router),
+    sem o body invadir com o relative, com o scroll diferente do fixed e sem quebrar a página quando o usuário
+    diminuir o tamanho da janela. */
+    min-height: 93vh;
+}
+
+.logincontainerleftpadding {
+    padding-left: 3.5vw;
+}
+
+.logintextinput {
+    border: solid 3.4px rgba(37, 37, 37, 0.801);
+    border-radius: 3px;
+    padding: 8px;
+    text-align: center;
+    width: 85%;
+}
+
+.logintextinput:focus {
+    text-align: left;
+}
+
+.logintextinput:focus::placeholder {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 810px) {
+    .loginform {
+        margin: 0;     
+        border-radius: 0;  
+        background-color: rgba(240, 240, 240, 0.541);
+
+        /* impede o min-content de quebrar as telas menores */
+        height: auto;
+    }
+}
+
+@media only screen and ((min-width: 811px) and (max-width: 1023px)) {
+    .loginform {
+        margin: 3.5vh 10vw 3.5vh 10vw;
+    }
+}

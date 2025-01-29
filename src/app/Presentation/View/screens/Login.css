@@ -1,0 +1,18 @@
+.loginbg {
+    background-image: url("../../../../../assets/images/santo_agostinho_1.jpeg");
+    background-position: top left;
+    background-size: cover;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 0;
+}
+
+.loginbg2 {
+    background-color: rgba(255, 255, 255, 0.151);
+}
+
+@media only screen and (max-width: 810px) {
+    .loginbg2 {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
